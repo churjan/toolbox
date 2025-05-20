@@ -1,0 +1,38 @@
+// 遍历生成宽度样式
+.loopWidth(@counter, @step: 10) when (@counter >= @step) {
+  .w@{counter} {
+    width: @counter * 1px;
+  }
+  .loopWidth(@counter - @step, @step);
+}
+.loopWidth(500);
+
+// 遍历生成内外边距样式
+.loop(@counter) when (@counter > 0) {
+  .mt@{counter} {
+    margin-top: @counter * 1px;
+  }
+  .mr@{counter} {
+    margin-right: @counter * 1px;
+  }
+  .mb@{counter} {
+    margin-bottom: @counter * 1px;
+  }
+  .ml@{counter} {
+    margin-left: @counter * 1px;
+  }
+  .pt@{counter} {
+    padding-top: @counter * 1px;
+  }
+  .pr@{counter} {
+    padding-right: @counter * 1px;
+  }
+  .pb@{counter} {
+    padding-bottom: @counter * 1px;
+  }
+  .pl@{counter} {
+    padding-left: @counter * 1px;
+  }
+  .loop(@counter - 1);
+}
+.loop(50);
