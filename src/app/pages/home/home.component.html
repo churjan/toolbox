@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div class="page-layout">
+  <main class="main-content">
+    <div class="tool-list">
+      @for (item of tools; track $index) {
+        <div class="tool-card" [routerLink]="['/widgets', item.path]">
+          <div class="tool-title">{{ item.name }}</div>
+          <div class="tool-desc mt12">{{ item.desc }}</div>
+        </div>
+      }
+    </div>
+  </main>
+</div>

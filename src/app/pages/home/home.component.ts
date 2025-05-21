@@ -8,6 +8,13 @@ import { HomeService } from './home.service';
   styleUrl: './home.component.less',
 })
 export class HomeComponent implements OnInit {
+  tools: any[] = [
+    {
+      name: '年龄计算器',
+      path: 'age-calculator',
+      desc: '输入出生日期，计算年龄',
+    },
+  ];
   constructor(private hs: HomeService) {}
 
   ngOnInit(): void {
