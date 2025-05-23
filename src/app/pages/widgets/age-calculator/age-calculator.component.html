@@ -1,1 +1,9 @@
-<p>age-calculator works!</p>
+<nz-cascader
+  #cascader
+  [nzOptions]="options"
+  [nzLoadData]="loadData"
+  [(ngModel)]="birthDate"
+  (ngModelChange)="onChanges($event)"
+  nzPlaceHolder="请选择出生日期"
+  (nzVisibleChange)="scrollToItem($event)"
+></nz-cascader>
